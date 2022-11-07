@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainApp">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="303dp"
+        android:layout_height="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/logo_blue" />
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="1309dp"
+        android:layout_height="967dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_background" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="272dp"
+        android:background="@drawable/ic_background_title"
+        android:fontFamily="@font/kanit"
+        android:insetBottom="8dp"
+
+        android:paddingLeft="22dp"
+        android:paddingTop="3dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="3dp"
+        android:text="@string/date"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        app:cornerRadius="20dp"
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        app:iconSize="50dp"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/enterYourDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="332dp"
+        android:fontFamily="@font/kanit"
+        android:text="@string/enter_birthdate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <Button
+        android:id="@+id/date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="136dp"
+        android:background="@drawable/ic_background_title"
+        android:fontFamily="@font/kanit"
+        android:insetBottom="8dp"
+
+        android:paddingLeft="22dp"
+        android:paddingTop="3dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="3dp"
+        android:text="@string/date2"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        app:cornerRadius="20dp"
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        app:iconSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
