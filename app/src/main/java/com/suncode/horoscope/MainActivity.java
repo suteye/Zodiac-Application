@@ -15,6 +15,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     Button DateButt;
+    Button zodiac;
     TextView Date;
     Intent intent;
     @Override
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 datePickerDialog.show();
             }
         });
+
+        zodiac = (Button)findViewById(R.id.date2);
+        zodiac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+        
     }
 
     public void  onDateSet(DatePicker view, int year, int month, int dayOfMonth){

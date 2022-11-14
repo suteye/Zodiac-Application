@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +14,7 @@ public class ResultActivity extends AppCompatActivity {
     TextView zodiac_text_result;
     String zodiac;
     ImageView zodiac_sign;
+    Button zodiac_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,7 @@ public class ResultActivity extends AppCompatActivity {
         zodiac = intent.getStringExtra("Zodiac");
         zodiac_text_result = findViewById(R.id.zodiac);
         zodiac_sign = findViewById(R.id.logo);
+        zodiac_btn = (Button)findViewById(R.id.button);
 
         if(zodiac.equals("Capricorn")){
             zodiac_sign.setImageResource(R.drawable.capricorn);
@@ -60,5 +64,15 @@ public class ResultActivity extends AppCompatActivity {
             zodiac_sign.setImageResource(R.drawable.sagittarius);
             zodiac_text_result.setText(zodiac);
         }
+
+        zodiac_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(ResultActivity.this, DetailActivity.class);
+                intent.putExtra("HOROSCOPE_NAME", zodiac);
+                startActivity(intent);
+            }
+        });
     }
+    
 }
